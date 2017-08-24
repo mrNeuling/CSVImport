@@ -16,6 +16,10 @@
         <testsuite name="Project Test Suite">
             <directory>tests</directory>
         </testsuite>
+
+        <testsuite name="Import Test Suite">
+            <directory>tests/ImportBundle</directory>
+        </testsuite>
     </testsuites>
 
     <filter>

@@ -1,0 +1,46 @@
+AppBundle\Entity\Product:
+    type: entity
+    table: tblProductData
+    repositoryClass: AppBundle\Repository\Product\DoctrineProductRepository
+    id:
+        id:
+            type: integer
+            column: intProductDataId
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        name:
+            type: string
+            column: strProductName
+            length: '50'
+        description:
+            type: string
+            column: strProductDesc
+            length: 255
+        code:
+            type: string
+            column: strProductCode
+            length: '10'
+            unique: true
+        addedAt:
+            type: datetime
+            column: dtmAdded
+            nullable: true
+        discontinuedAt:
+            type: datetime
+            column: dtmDiscontinued
+            nullable: true
+        timestamp:
+            type: integer
+            column: stmTimestamp
+            options:
+                default: CURRENT_TIMESTAMP
+        availableCount:
+            type: integer
+            column: intStock
+            nullable: false
+        price:
+            type: float
+            column: decPrice
+    lifecycleCallbacks: {  }

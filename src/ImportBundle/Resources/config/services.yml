@@ -1,0 +1,9 @@
+services:
+    repository.product.doctrine:
+        class: Doctrine\ORM\EntityRepository
+        factory: ['@doctrine.orm.default_entity_manager', getRepository]
+        arguments:
+            - AppBundle\Entity\Product
+
+    repository.product.array:
+        class: ImportBundle\Repository\Product\ArrayProductRepository

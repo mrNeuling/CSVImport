@@ -17,3 +17,7 @@ parameters:
 
     # A secret key that's used to generate certain security-related tokens
     secret: ThisTokenIsNotSoSecretChangeIt
+
+    product_min_price: 5
+    product_max_price: 1000
+    product_min_stock: 10

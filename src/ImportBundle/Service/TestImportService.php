@@ -93,10 +93,10 @@ class TestImportService
 
         if (null === $product) {
             $product = new Product();
+            $product->setCode($row[C::CSV_INDEX_CODE]);
             $this->productRepository->add($product);
         }
 
-        $product->setCode($row[C::CSV_INDEX_CODE]);
         $product->setName($row[C::CSV_INDEX_NAME]);
         $product->setDescription($row[C::CSV_INDEX_DESCRIPTION]);
         $product->setAvailableCount((int)$row[C::CSV_INDEX_AVAILABLE_COUNT]);

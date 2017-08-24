@@ -18,6 +18,14 @@ class ArrayProductRepository implements ProductRepository
     private $products;
 
     /**
+     * ArrayProductRepository constructor.
+     */
+    public function __construct()
+    {
+        $this->products = [];
+    }
+
+    /**
      * @inheritdoc
      */
     public function add(Product $product)
